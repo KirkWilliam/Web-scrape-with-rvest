@@ -1,0 +1,35 @@
+---
+title: "Using Rvest to Scrape Data from a Website"
+author: "Kirk Nielson"
+---
+
+
+###Install & Load rvest
+```{r}
+install.packages('rvest')
+library('rvest')
+
+```
+
+
+###Lego movie
+```{r}
+lego_movie <- read_html("https://www.imdb.com/title/tt4073790/?ref_=inth_ov_tt")
+
+lego_movie %>%
+  html_node("strong span") %>%
+  html_text() %>%
+  as.numeric()
+
+lego_movie %>%
+  html_nodes("#titleCast .itemprop span") %>%
+  html_text()
+
+#lego_movie %>%
+#  html_nodes("table") %>%
+#  .[[3]] %>%
+#  html_table()
+
+```
+
+

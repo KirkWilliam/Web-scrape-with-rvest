@@ -1,13 +1,15 @@
 ---
 title: "Using Rvest to Scrape Data from a Website"
 author: "Kirk Nielson"
+date: "June 25, 2018"
+output: html_document
 ---
 
 
 ###Install & Load rvest
 ```{r}
-install.packages('rvest')
 library('rvest')
+library('knitr')
 
 ```
 
